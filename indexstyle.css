@@ -16,7 +16,7 @@ header {
     box-shadow: 0 4px 8px #aaaaaa;
 }
 
-{header} p{
+header p{
     border: 5px solid #1a252f;
     font-size: 20px;
     margin-top: 10px;
