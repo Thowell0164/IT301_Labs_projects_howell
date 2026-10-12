@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tip calc</title>
+</head>
+<body>
+    <h1>Tip calculator</h1>
+    <script>
+    let bill;
+let message = "Enter your total restaurant bill amount:";
+
+do {
+    bill = prompt(message);
+
+    if (bill === "") {
+        message = "Please enter a bill amount greater than zero.";
+    } else if (Number(bill) < 0) {
+        message = "Negative amounts are not allowed. Please enter a valid bill amount.";
+    } else if (typeof Number(bill) !== "number" || bill.trim() === "" || Number(bill) === 0) {
+        message = "Invalid input. Please enter a numeric bill amount.";
+    }
+
+} while (bill === "" || Number(bill) <= 0 || typeof Number(bill) !== "number");
+
+bill = Number(bill);
+let tip = bill * 0.10;
+
+console.log("For a bill of $" + bill + ", the tip should be $" + tip + ".");
+
+document.write("For a bill of $" + bill + ", the tip should be $" + tip + ".");
+
+    </script>
+    
+</body>
+</html>
