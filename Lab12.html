@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="greet()">Submit</button>
+    <p id="greeting"></p>
+
+<input type="number" id="num1" placeholder="First number">
+<input type="number" id="num2" placeholder="Second number">
+
+<br><br>
+
+<input type="radio" name="math" value="add"> Addition
+<br>
+<input type="radio" name="math" value="subtract"> Subtraction
+<br>
+<input type="radio" name="math" value="multiply"> Multiplication
+<br>
+<input type="radio" name="math" value="divide"> Division
+
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+<button onclick="resetPage()">Start Again</button>
+
+<script>
+
+    function greet() {
+    let name = document.getElementById("name").value;
+    document.getElementById("greeting").textContent = "Hello, " + name;
+}
+
+function calculate() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let math = document.querySelector('input[name="math"]:checked');
+
+    if (math == null) {
+        document.getElementById("result").textContent = "Choose a calculation";
+    }
+    else if (math.value == "add") {
+        document.getElementById("result").textContent = num1 + num2;
+    }
+    else if (math.value == "subtract") {
+        document.getElementById("result").textContent = num1 - num2;
+    }
+    else if (math.value == "multiply") {
+        document.getElementById("result").textContent = num1 * num2;
+    }
+    else if (math.value == "divide") {
+        if (num2 == 0) {
+            document.getElementById("result").textContent = "Cannot divide by zero";
+        }
+        else {
+            document.getElementById("result").textContent = num1 / num2;
+        }
+    }
+}
+
+function resetPage() {
+    document.getElementById("name").value = "";
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("greeting").textContent = "";
+    document.getElementById("result").textContent = "";
+}
+
+</script>
+</body>
+</html>
