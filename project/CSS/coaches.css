@@ -1,0 +1,63 @@
+
+.coach-box {                                            /* Boxes for each staff */
+    background-color: #ffffff;
+    color: #2c0363;
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px auto;
+    width: 75%;
+}
+
+.coaches-header h1 {                                /*main page heading*/
+    background-color: #2c0363;  
+    color: white;
+    font-size: 40px;
+    margin: 0 0 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.coaches-header p{                          /*intro coaches text*/
+    background-color: #2c0363;  
+    color: white;
+    font-size: 20px;
+    margin: 0 0 10px;
+    text-align: center;
+    padding: 0px;
+}
+
+.coach-box h2 {                                         /* Coach box headers */
+    background-color: #2c0363;  
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 0;
+    border-radius: 5px;
+}
+
+
+.coach-box p {                                          /* Coaches names */
+    padding: 8px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+}
+
+/* Media querey for all the coach boxes and the headers */
+@media (max-width: 600px) {
+    .coaches-header h1 {
+        font-size: 25px;
+    }
+
+    .coach-box {
+        box-sizing: border-box;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .coach-box h2 {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
