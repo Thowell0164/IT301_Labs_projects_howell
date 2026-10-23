@@ -1,0 +1,52 @@
+/* Center Newsletter Signup */
+.signup-box {
+    text-align: center;
+    margin: 50px auto;
+    width: 350px;
+    max-width: 85%;
+}
+
+
+.signup-box h1 {                                    /*signup heading*/
+    color: #2c0363;
+}
+
+.signup-box p {                                     /*signup description style*/
+    color: #2c0363;
+    font-size: 30px;
+}
+
+.signup-box label {                                 /*form labels*/
+    display: block;
+    color: #2c0363;
+    margin-bottom: 8px;
+}
+
+                                                        
+.signup-box form {                      /* Center the Form on page */
+    text-align: center;
+}
+
+.signup-box input {                     /*email input field*/
+    padding: 10px;
+    max-width: 90%;
+}
+
+.signup-box button {                /*signup button*/
+    display: block;
+    margin: 15px auto;
+    padding: 8px 18px;
+    background-color: #2c0363;
+    color: white;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ajust the signup box slightly for smaller screens */
+@media (max-width: 600px) {
+    .signup-box {
+        width: 90%;
+        margin: 30px auto;
+    }
+}
